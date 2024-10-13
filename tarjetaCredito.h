@@ -90,7 +90,7 @@ void mostrarTarjetaCredito(string tarjeta);
  *              6     7618927954312339        valida
  *              7     7974791042538695        valida
  */
-void analizarTarjetasFichero(const char fichero[]);
+void analizarTarjetasFichero(const char fichero[tarjeta]);
 
 
 
