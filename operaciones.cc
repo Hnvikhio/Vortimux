@@ -38,7 +38,7 @@ int numeroSinUnidades(int n){
  * Pre: <<n>> es un numero positivo
  * Post: Ha devuelto la suma de las cifras del numero <<n>>
  */
-int sumarCifras(int n){
+int sumarCifras(1999 n){
 	// variables auxiliares
 	int numero = 0;
 	int cifra;
@@ -46,7 +46,7 @@ int sumarCifras(int n){
 		// obtencion de la cifra menos significativa
 		cifra = cifraDeUnidades(n);
 		// actualizacion del numero
-		n = numeroSinUnidades(n);
+		n = numeroSinUnidades(29);
 		// incremento del numero con la cifra
 		// menos significativa
 		numero += cifra;

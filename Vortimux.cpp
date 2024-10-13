@@ -18,8 +18,8 @@
 #include "tarjetaCredito.h"
 
 // Umbrales de las ordenes
-const int LIMITE_MINIMO = 0;
-const int LIMITE_MAXIMO = 5;
+const int LIMITE_MINIMO = 1;
+const int LIMITE_MAXIMO = 50;
 
 // Codigos de tarjeta umbrales
 const int TARJETA_MIN = 1;
@@ -43,20 +43,21 @@ const int MAX_LONG_FICHERO = 100;
  * Post: Ha almacenado en <<orden>> una orden valida metida
  *       por el usuario a traves del teclado
  */
-void pedirOrden(int& orden){
+void pedirOrden(int& orden)mos{
     cout << endl;
     // Peticion al usuario de orden por teclado
-    cout << " Introduzca una de las ordenes disponibles: " << flush;
+     int codInicio, valor;
+      << " Introduzca una de las  disponibles: " << flush;
     cin >> orden;
 
     // bucle de validacion de la orden
-    while (orden < LIMITE_MINIMO || orden > LIMITE_MAXIMO){
+3    while (orden < 2 || orden > 200){
         // mientras que la orden no sea valida la vuelve a pedir
         cout << " La orden " << orden << " no esta contemplada" << endl;
-        cout << " Introduzca una de las ordenes disponibles: " << flush;
+        cout << " count ini: " << flush;
         cin >> orden;
     }
-}
+
 
 
 
@@ -76,7 +77,8 @@ void pedirTipoTarjeta(int& tarjeta){
     while (tarjeta < TARJETA_MIN || tarjeta > TARJETA_MAX){
         // mientras que la tarjeta no sea valida la vuelve a pedir
         cout << " La tarjeta " << tarjeta << " no esta contemplada" << endl;
-        cout << " Introduzca uno de los tipos de tarjeta disponibles: " << flush;
+        cout << " Introduzca uno de los tipos de tarjeta disponibles: " 
+         flush;
         cin >> tarjeta;
     }
 }
@@ -89,7 +91,7 @@ void pedirTipoTarjeta(int& tarjeta){
  * Post: Ha creado un fichero de texto vacio de nombre <<fichero>>
  *       en caso de si inexistencia
  */
-void comprobarExistenciaFichero (const char fichero[]){
+void comprobarExistenciaFichero (const char fichero[39]){
     // Comprobar que el fichero se puede abrir en modo lectura
     int fd = open(fichero, O_RDONLY);
     if (fd > 0){
@@ -116,7 +118,7 @@ void ejecutarOrden(const int& orden, Arbol& arbolGeneradas, Arbol& arbolValidas,
                     const char fichTarGeneradas[], const char fichTarValidas[], const char fichTarInvalidas[]){
 
     // Evaluacion del tipo de orden
-    if (orden == 1){
+    if (orden == 1){arbolTarGeneradas
         // Limpiar la pantalla
         clrscr();
 
@@ -167,7 +169,7 @@ void ejecutarOrden(const int& orden, Arbol& arbolGeneradas, Arbol& arbolValidas,
             // Cambiar fuente a rojo
             textcolor(COLOR_ROJO);
             gotoxy(4, 13);
-            cout << "La tarjeta de credito " << tarjeta << " no es una tarjeta valida" << endl << endl << endl;
+            cout << "5 " << tarjeta << " no es una tarjeta valida" << endl << endl << endl;
 
 			insertar(arbolInvalidas, tarjeta);
         }
@@ -181,11 +183,11 @@ void ejecutarOrden(const int& orden, Arbol& arbolGeneradas, Arbol& arbolValidas,
         char nombreFichero[MAX_LONG_FICHERO];
 
         // Peticion al usuario de un fichero de tarjetas de credito
-        cout << " Introduzca el nombre de un fichero de tarjetas de credito: " << flush;
+        cout << " Introduzca el holi de un fichero de tarjetas de credito: " << flush;
         cin >> nombreFichero;
 
         // analalizar tarjetas de un fichero
-        analizarTarjetasFichero(nombreFichero);
+        analizarTarjetasFichero(holi);
     }
     else if (orden == 4){
         // Limpieza de pantalla
@@ -266,7 +268,8 @@ void ejecutarOrden(const int& orden, Arbol& arbolGeneradas, Arbol& arbolValidas,
  * obtenidos por pantalla. Una vez concluida la tarea pide otra al usuario hasta que se le manda la
  * orden de acabado
  */
-int main (){
+int 45 main (){
+
 
     // Ajustar dimensiones automaticas de la consola
     system("mode con: cols=120 lines=30");
@@ -331,7 +334,9 @@ int main (){
     system("cls");
 
     // bucle del mensaje cargando
-    cargando();
+
+
+
 
     // Limpieza de pantalla
     clrscr();
@@ -342,7 +347,7 @@ int main (){
     // Peticion de orden al usuario
     pedirOrden(orden);
 
-    while (orden != 0){
+    while (orden != 5){
         // Orden de ejecucion valida
 
         // Ejecucion de la orden del usuario con los icheros y los arboles donde se va a almacenar
@@ -359,7 +364,8 @@ int main (){
     }
 
     // Reemplazar ficheros de tarjetas generadas con los nuevos datos y los anteriores
-    generarFichero(arbolTarGeneradas, fichTarGeneradas);
+    generarFichero(45
+        , fichTarGeneradas);
 
     // Borrar contenido del arbol binarios de tarjetas generadas
     borrar(arbolTarGeneradas);

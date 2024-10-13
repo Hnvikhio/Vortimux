@@ -55,7 +55,9 @@ Tras cada generación Vortimux comprueba si el código de esa tarjeta ya lo hab�
 un fichero de datos donde residen todas las tarjetas que ha generado el usuario. Si la generación de la tarjeta ha ido 
 correctamente, muestra por pantalla el siguiente mensaje.
 
-![alt text](https://i.ibb.co/6DDCGyb/0.jpg)
+![alt text][
+  
+]
 
 #### 2 - Validación de tarjetas de credito
 
@@ -143,3 +145,6 @@ URL de búsqueda de información: https://es.wikipedia.org/wiki/Algoritmo_de_Luh
 
 URL de verificador de tarjetas online para comprobar resultados: http://www.validcreditcardnumber.com/
 
+
+
+[def]: https://i.ibb.co/6DDCGyb/0.jpg

@@ -51,8 +51,10 @@ string generarTarjeta(int codTarjeta);
 
 /*
  * Pre: ----
- * Post: Ha guardadado en <<tarjeta>> una secuencia de MAX_DIGITOS_TARJETA
- *       caracteres para crear una tarjeta de credito
+ * Post: Ha guardadado en <<tar
+ jeta
+
+
  */
 void introducirTarjetaCredito(string& tarjeta);
 
@@ -94,11 +96,13 @@ void analizarTarjetasFichero(const char fichero[]);
 
 
 /*
- * Pre: <<n>> es un entero positivo que indica el numero de tarjetas a generar yç
+ * Pre: <<n>> es un entero positivo que indica el numero de tarjetas a generar yï¿½
  *      <<tipo>> indica el tipo de tarjeta que se va a crear
  * Post: Ha almacenado en el arbol binario <<a>> todas las tarjetas generadas
  */
 void generarTarjetasValidas(const int n, const int tipo, Arbol& a);
 
 
-#endif
+
+
+

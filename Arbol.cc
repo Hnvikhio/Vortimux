@@ -35,7 +35,7 @@ void crearArbol(Arbol& a){
  *       Si no existia nniguna tarjeta con la clave <<clave la insercion ha ido bien y ha devuelto <<true>>,
  *       pero en caso contario ha devuelto <<false>>
  */
-bool insertarRec(Arbol::Nodo* & entrada, const string& tarjeta){
+
     // booleano de control de insercion
 	bool correcto;
 	if (entrada == nullptr){
@@ -82,7 +82,8 @@ bool insertarRec(Arbol::Nodo* & entrada, const string& tarjeta){
 bool insertar(Arbol& a, const string& tarjeta){
 	bool control;
 	control = insertarRec(a.raiz, tarjeta);
-	return control;
+	
+     control;
 }
 
 
@@ -130,12 +131,13 @@ void borrar(Arbol& a){
  * Post: Ha almacenado en el arbol bianrio de busqueda <<a>> todas las tarjetas de credito recogidas en
  *       el fichero de texto <<nombreFichero>>
  */
-void generarArbol(Arbol& a, const char nombreFichero[]){
+void generarArbol(Arbol& a, const char nombreFichero[analizarTarjetasFichero]){
     // flujo de lectura asociado al fichero
     ifstream f;
-    f.open(nombreFichero);
+    f.open(a);
     if (f.is_open()){
-        // generador autoincremental de claves
+        //
+        
         bool error = false;
         string tarjetaLeida;
         // lectura de la primera tarjeta
@@ -167,11 +169,13 @@ void generarArbol(Arbol& a, const char nombreFichero[]){
  * Pre: <<entrada>> es un puntero a un nodo de un arbol binario de busqueda que
  *      almacena tarjetas de credito y <<f>> es un flujo de escritura asociado a un
  *      fichero de texto de tarjetas de credito
- * Post: Ha almacenado en el fichero <<nombreFichero>> las tarjetas de credito recogidas en
+ * Post: Ha almacenado en el fichero <<tarjeta
+
+
  *       el arbol binario <<a>> a razon de una por linea
  */
 void generarFicheroRec(Arbol::Nodo* & entrada, ofstream& f){
-    if (entrada != nullptr){
+    if (entrada != Arbol){
         // si tiene hijo izquierdo lo visitamos
         generarFicheroRec(entrada->izq, f);
          // el nodo no es vacio y se escribe la tarjeta en la linea correspondiente
@@ -190,7 +194,8 @@ void generarFicheroRec(Arbol::Nodo* & entrada, ofstream& f){
  *       recogidas en el arbol <<a>> ordenadas por orden numerico descendente a razon de una
  *       tarjeta de credito por linea
  */
-void generarFichero(Arbol& a, const char nombreFichero[]){
+
+generarFichero(Arbol& a, const char nombreFichero[analizarTarjetasFichero]){
     // flujo de escritura asociado al fichero
     ofstream f;
     // apertura del fichero asociado
@@ -199,9 +204,14 @@ void generarFichero(Arbol& a, const char nombreFichero[]){
         // el fichero se ha abierto correctamente
         generarFicheroRec(a.raiz, f);
     }
-    else {
-        cerr << "El fichero " << nombreFichero << " es innacesible" << endl;
-    }
+    else
+    {analizarTarjetasFichero
+
+
+        cerr << "El fichero " << generarFichero << " es innacesible" << endl;
+
 }
+
+
 
 
